@@ -1,1 +1,45 @@
 This is my first practice as a DevOps Engineer, my Journey starts here and I wish myself the very best.... dated: 13/04/2023
+
+
+Saving some DevOps Apps Installation Guidelines:
+
+-- To run Maven on Debian/Ubuntu:======================================================================
+
+Installation:  sudo apt install maven
+
+Build:  mvn archetype:generate -DgroupId=com.sample.webproject -DartifactId=SampleWebApp -DarchetypeArtifactId=maven-archetype-webapp -DinteractiveMode=false
+
+
+To run Jenkins on Debian/Ubuntu:================================================================================
+
+https://www.jenkins.io/doc/book/installing/linux/#debianubuntu
+
+
+curl -fsSL https://pkg.jenkins.io/debian-stable/jenkins.io-2023.key | sudo tee \
+  /usr/share/keyrings/jenkins-keyring.asc > /dev/null
+
+echo deb [signed-by=/usr/share/keyrings/jenkins-keyring.asc] \
+  https://pkg.jenkins.io/debian-stable binary/ | sudo tee \
+  /etc/apt/sources.list.d/jenkins.list > /dev/null
+
+sudo apt-get update
+sudo apt-get install jenkins
+
+sudo systemctl start jenkins
+sudo systemctl status jenkins
+
+
+To run Tomcat9:=======================================================================================
+
+sudo apt-get install tomcat9 tomcat9-docs tomcat9-admin
+
+
+sudo cp -r /usr/share/tomcat9-admin/* /var/lib/tomcat9/webapps/ -v
+
+
+sudo nano /var/lib/tomcat9/conf/tomcat-users.xml
+
+
+
+
+=========================================================
